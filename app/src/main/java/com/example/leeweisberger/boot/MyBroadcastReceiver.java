@@ -17,5 +17,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
         myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         myIntent.setComponent(new ComponentName("com.k4connect.k4app", "com.k4connect.k4app.K4MainActivity"));
         context.startActivity(myIntent);
+
+        WifiUtil.connectToWifi(context);
     }
 }
